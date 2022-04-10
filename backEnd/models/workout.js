@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 
 const workoutSchema = new mongoose.Schema({
     Date: {
-        type:String,
+        type:Date,
         required: true,
-        minlength: 2,
-        maxlength: 50
+        default: Date.now
+        
     },
     workout: {
         type:String,
@@ -26,4 +26,7 @@ const workoutSchema = new mongoose.Schema({
     }
 });
 
-const workout = mongoose.model('Workouts', workoutSchema);
+const Workout = mongoose.model('Workouts', workoutSchema);
+
+exports.Workout = Workout;
+exports.workoutSchema = workoutSchema;

@@ -1,3 +1,5 @@
+//On this file all the routes will be complied on a single function so that index.js has a cleaner workspace.
+
 const express = require('express');
 /* const customers = require('../routes/customers');  */
 

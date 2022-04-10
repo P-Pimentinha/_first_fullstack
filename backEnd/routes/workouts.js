@@ -28,4 +28,13 @@ let workout = new Workout({
   res.send(workout);
 });
 
+router.delete('/:id', async (req, res) => {
+    const workout = await Workout.findByIdAndRemove(req.params.id);
+  
+    if (!workout) return res.status(404).send('The customer with the given ID was not found.');
+  
+    res.send(workout);
+  
+  });
+
 module.exports = router;

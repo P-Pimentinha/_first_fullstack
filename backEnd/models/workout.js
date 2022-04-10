@@ -29,8 +29,8 @@ const workoutSchema = new mongoose.Schema({
     },
     notes: {
         type:String,
-        minlength: 2,
-        maxlength: 50
+        minlength: 1,
+        maxlength: 255
     },
     duration: {
         type:String,

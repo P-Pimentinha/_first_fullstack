@@ -57,4 +57,24 @@ router.put('/', async (req, res) => {
   res.send(workout);
 });
 
+router.delete('/:id', async (req, res) => {
+  const workout = await Workout.findByIdAndRemove(req.params.id);
+
+  if (!workout) return res.status(404).send('The workout with the given ID was not found.');
+
+  res.send(workout);
+
+});
+
+/* router.delete('/', async (req, res) => {
+  const workout = await Workout.findByIdAndRemove(req.body._id);
+
+  if (!workout) return res.status(404).send('The workout with the given ID was not found.');
+
+  res.send(workout);
+
+}); */
+
 module.exports = router;
+
+

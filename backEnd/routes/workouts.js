@@ -2,7 +2,16 @@ const express = require('express');
 const router = express.Router();
 const { Workout } = require('../models/workout');
 
+// retuns all the workouts
 router.get('/', async (req, res) => {
+    const workout = await Workout.find();
+
+    //retuns the last 10 workouts
+    res.send(workout);
+  });
+
+// retuns the last 10 workouts
+router.get('/10', async (req, res) => {
     const workout = await Workout.find();
 
     //retuns the last 10 workouts
@@ -28,8 +37,8 @@ let workout = new Workout({
   res.send(workout);
 });
 
-router.delete('/:id', async (req, res) => {
-    const workout = await Workout.findByIdAndRemove(req.params.id);
+router.delete('/', async (req, res) => {
+    const workout = await Workout.findByIdAndRemove(req.body._id);
   
     if (!workout) return res.status(404).send('The customer with the given ID was not found.');
   

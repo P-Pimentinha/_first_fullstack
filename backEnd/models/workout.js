@@ -36,7 +36,7 @@ const workoutSchema = new mongoose.Schema({
         type:String,
         minlength: 2,
         maxlength: 50
-    }
+    },
 });
 
 const Workout = mongoose.model('Workouts', workoutSchema);

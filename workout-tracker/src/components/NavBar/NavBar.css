@@ -1,0 +1,44 @@
+ul {
+    list-style: none;
+}
+
+.nav__ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #27ba64;
+    margin: auto;
+    padding: 1rem;
+    color: white;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+#logo {
+    font-weight: bold;
+}
+
+.menu:hover {
+    transform: scale(1.1);
+}
+
+.navSelectors {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.navSelector {
+    border-bottom-style: solid;
+    border-bottom-color: #27ba64;
+    
+}
+
+.navSelector:hover {
+    border-bottom-style: solid;
+    border-bottom-color: #ffffffce;
+    border-bottom-width: 2.5px;
+    cursor: pointer;
+}

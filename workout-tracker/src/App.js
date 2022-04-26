@@ -1,21 +1,20 @@
-import './App.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import NavBar from './components/NavBar/NavBar'
+import UserOverView from "./components/userOverView/UserOverView";
+import "./App.css";
 
 function App() {
-    return (
-        <Container>
-            <Row>
-                <Col>col 1 of 2</Col>
-                <Col>col 2 of 2</Col>
-            </Row>
-            <Row>
-                <Col>col2 1 of 2</Col>
-                <Col>col2 2 of 2</Col>
-            </Row>
-        </Container>
-    )
+  return (
+    <div class="container">
+      <header>
+        <NavBar class='navbar'/>
+        <UserOverView class='userOverView'/>
+      </header>
+      <div id='body'>
+          <div></div>
+          <div></div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
